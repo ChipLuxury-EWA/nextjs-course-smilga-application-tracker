@@ -1,4 +1,16 @@
+import { UserButton } from "@clerk/nextjs";
+import LinksDropdown from "./LinksDropdown";
+import ThemeToggle from "./ThemeToggle";
+
 const NavBar = () => {
-  return <div>NavBar</div>;
+  return (
+    <nav className="bg-muted py-4 px-4 flex items-center justify-between">
+      <LinksDropdown />
+      <div className="flex items-center gap-x-4">
+        <ThemeToggle />
+        <UserButton />
+      </div>
+    </nav>
+  );
 };
 export default NavBar;
